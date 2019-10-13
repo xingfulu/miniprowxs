@@ -1,0 +1,34 @@
+<view class="testaa">
+<view class="lulu">
+    <view class="lulu-form">        
+        <view class="lulu-form-con"> 
+        </view>
+    </view>
+    <!-- 按钮 -->
+    <view class="lulu-bottom">
+        <view class="lulu-bottom-btns">
+        <wxs module="test" src="./test.wxs"></wxs> 
+            <view class="lulu-bottom-btn lulu-bottom-btn-toggle" bindtouchstart="{{test.recoStart}}" bindtouchend="recordStop" bindlongpress="recordStart" bindtouchmove="{{test.recordMove}}">
+                录音
+            </view>
+        </view>
+        <!-- 长按播放录音的状态 -->
+        <view hidden="{{recordStep=='stop'}}" class="record-wxs {{showspeack?'record-status':'record-statusnew'}} record-status-{{recordStep}}">
+            <view wx:if="{{showspeack}}">
+                <view class="record-step-num" wx:if="{{recordnum<=10 && recordnum>0}}">{{recordnum}}s</view>
+                <view class="record-step-recording" wx:elif="{{pressflag && recordnum>0}}">
+                    <view class="record-status-icon"></view>
+                    <view class="record-status-text">手指上滑</view>
+                    <view class="record-status-text">边看病历边录音</view>
+                </view>
+                <view class="record-step-recording" wx:elif="{{!pressflag && recordnum>0}}">
+                    <view class="record-status-icon"></view>
+                    <view class="record-status-text">松开手指</view>
+                    <view class="record-status-text">边看病历边录音</view>
+                </view>
+            </view>
+            <view class="record-step-uploading"></view>
+        </view>
+    </view>
+</view>
+</view>

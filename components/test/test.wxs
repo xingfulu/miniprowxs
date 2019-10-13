@@ -1,0 +1,27 @@
+var startPoint = '';
+function recoStart(e, ins) {
+  startPoint = e.touches[0].clientY;
+  ins.callMethod('test', function () {
+
+  })
+  ins.triggerEvent('openOnecase', function () {
+
+  })
+}
+function recordMove(e, ins) {
+  //console.log(ins.callMethod('recordStart'));
+  ins.callMethod('recordStart', function (e) {
+    console.log(e);
+  })
+  testflag=false;
+  var moveLenght = e && e.changedTouches && e.changedTouches[e.changedTouches.length - 1].clientY - startPoint;
+  if (moveLenght < -27) {
+    ins.selectComponent('.record-wxs').addClass('record-statusblue');
+  } else {
+    ins.selectComponent('.record-wxs').removeClass('record-statusblue');
+  }
+}
+module.exports = {
+  recoStart: recoStart,
+  recordMove: recordMove
+}

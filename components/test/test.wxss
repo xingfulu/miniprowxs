@@ -1,0 +1,141 @@
+.testaa {
+    position: fixed;
+    bottom: 0;
+}
+.lulu {
+    width: 100vw;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+
+.lulu-form-con {
+    display: block;
+    padding-top: 1px;
+    height: 175px;
+    overflow-y: scroll;
+    overflow: scroll;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.lulu-bottom-btns {
+    width: 100%;
+    display: flex;
+}
+
+.lulu-bottom-btn {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 19px;
+    color: #FFF;
+    text-align: center;
+    margin: 0 auto;
+    width: 125px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 3px;
+    background: #48AEFF;
+}
+
+.lulu-bottom-btn-toggle {
+    color: #000;
+    background: #F0F0F0;
+    border: 1px solid #666;
+}
+
+.lulu-bottom-btn-toggle:active {
+    background: #ddd;
+}
+
+
+.record-status {
+    display: none;
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 170px;
+    background-color: #3c3c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+.record-statusnew {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+.record-statusblue{
+  background-color:  #48AEFF;
+  opacity: 1;
+}
+.record-step-uploading{
+  
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    background-image: url("https://i1.hdfimg.com/ssi/wxmp/maskloading.gif");
+}
+.record-step-recording,.record-step-uploading{
+    display: none;
+}
+.record-status-recording .record-step-recording{
+    display: block
+}
+.record-status-uploading .record-step-uploading{
+    display: block
+}
+.record-step-num{
+    font-size: 40px;
+    color: #fff;
+}
+.record-status-icon {
+    display: inline-block;
+    background-image: url("../../images/talking.png");
+    width: 49px;
+    height: 68px;
+    background-size: 100% 100%;
+    margin: 15px 0 10px 5px;
+}
+.record-statusic{
+  display:inline-block;
+  width: 40px;
+  height: 58px;
+  background-size: 100% 100%;
+  margin: 15px 0 10px 10px;
+}
+.record-status-text {
+    font-size:16px;
+    color: #fff;
+    text-align: center;
+}
+
+.lulu-form-radio-list {
+    width: 100%;
+    height: 100%;
+}
+
+.lulu-form-radio-unless {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #999;
+}
